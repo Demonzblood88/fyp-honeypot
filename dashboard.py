@@ -106,4 +106,5 @@ def handle_connect():
     print("Client connected!")
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    # Run on all interfaces (0.0.0.0) and default port 5000 for public access
+    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
